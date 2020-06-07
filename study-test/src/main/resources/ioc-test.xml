@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="provider" class="com.study.ioc.DefaultProvider">
+		<constructor-arg index="0">
+			<ref bean="listener"/>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<ref bean="persister"/>
+		</constructor-arg>
+	</bean>
+
+	<bean id="listener" class="com.study.ioc.DefaultListener"></bean>
+	<bean id="persister" class="com.study.ioc.DefaultPersister"></bean>
+
+</beans>
